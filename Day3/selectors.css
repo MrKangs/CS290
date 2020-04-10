@@ -1,0 +1,35 @@
+/* There are three type of selectors 
+to add into CSS: Elements, Class, and Id*/
+/* This is comment (C-style comment) */
+
+
+/* This method below is element selectors */
+
+h1 {
+    font-family: sans-serif;
+    font-size: 50px;
+}
+/* This statement will modified the all the h1 values into 
+font style sans-serif and font-size to 50 pixel */
+
+p{
+    color: salmon;
+}
+/* This will modified all the paragraph into color salem */
+
+/* This method below is class selectors */
+
+/* .[some class name] will indicate as a class selectors */
+.italics{
+    font-style: italic;
+}
+/* This will apply all the part that has the class as italics */
+
+/* you can have multiple classes on one part, 
+look at fourth div paragraph */
+.bold{
+    font-weight: bold;
+}
+/* This statement will change the text to bold */ 
+
+/* This method below is Id selectors */
