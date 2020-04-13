@@ -12,6 +12,8 @@ h1 {
 /* This statement will modified the all the h1 values into 
 font style sans-serif and font-size to 50 pixel */
 
+/* You can also give a element to the body or head */
+
 p{
     color: salmon;
 }
@@ -33,3 +35,30 @@ look at fourth div paragraph */
 /* This statement will change the text to bold */ 
 
 /* This method below is Id selectors */
+
+#site-title {
+    background-color: lime;
+}
+/* This will create a highlight of the section if it has the id */
+
+/* This will be combinations: having the properties that has h1 and italics*/
+
+h1.italics {
+    border: 3px dashed purple;
+}
+
+#special-div p {
+    background-color: blue;
+}
+
+/* These will be specificity */
+/* There are four digit places that will co-respond */
+/* You can see the specificity by looking at the combinations */
+/* The order how it works 1st, 2nd, 3rd, and 4th: */
+/* If there is number in the 1st, it will only apply the 1st part */
+/* The 4th digit is the element selector */
+/* The 3rd digit is for the class selectors */
+/* The 2nd digit is for the id selectors */
+/* The 1st digit is fir inline CSS */
+/* Take a look at the Specificity.html and specificity.css to know better */
+

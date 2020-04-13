@@ -17,14 +17,17 @@
     </head>
 
     <body>
-        <h1>This is the title</h1>
+        <h1 id = "site-title" class = "italics">This is the title</h1>
 
         <div>
-            First div
+            First div <a href = "#section-title">Jump to section</a>
+            <!-- This will jump to that id where it is: similar to relative links-->
             <p>
                 First div' paragraph
             </p>
         </div>
+
+        <h1 class="italics"> This is another h1 </h1>
 
         <div>
             Second div
@@ -47,18 +50,21 @@
             </p>
         </div>
 
-        <div>
+        <div id = "special-div">
             Fifth div
             <p class = "italics">
                 Fifth div' paragraph
             </p>
         </div>
 
-        <div>
+        <div id = "special-div">
             Sixth div
             <p>
                 Sixth div' paragraph
             </p>
+            <div>
+                <p>This is a nested paragraph</p>
+            </div>
         </div>
 
         <div>
@@ -75,12 +81,7 @@
             </p>
         </div>
 
-        <div>
-            Second div
-            <p>
-                Second div' paragraph
-            </p>
-        </div>
+        <h2 id = section-title>This is a new section</h2>
 
     </body>
 
