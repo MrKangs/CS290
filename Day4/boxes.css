@@ -1,0 +1,41 @@
+P{
+    background-color: lime;
+    
+    width: 400px;
+    height: 200px;
+    /* you will see a box that is highlighted as 400px witdth and 200px height */
+    
+    /*padding: 20px; */
+    /* padding makes a box around the contents that push in. */
+    /* looks similar to margins, but margins is more outer box than padding */
+
+    padding: 10px 30px 50px 70px;
+    /* This will do 10 px up, 30 px right, 50 px down, and 70px left */
+
+    /* padding: 10px 30px; */
+    /* If we do it do this, it will modify like 10px up and down and 30 px right and left */
+
+    border: 5px solid darkgray;
+    /* Border will make a box for padding and context boxes */
+
+    margin: 40px;
+
+}
+
+#special-p{
+    
+    padding-left: 100px;
+    /* special-p overrides the previous padding, so it will be 100 px rather than 70px */
+
+    border-top: 20px dotted magenta;
+    /* same as padding, border can do as like that */
+
+    margin-bottom: 200px;
+    /* bottom margin for #special-p values */ 
+}
+
+
+
+
+
+
