@@ -14,6 +14,7 @@ p {
   border: 5px solid #454545;
   border-radius: 20px;
   background-color: #8eda93;
+  position: relative;
 }
 
 .inner {
@@ -30,4 +31,52 @@ p {
 
 .inner.unpositioned {
   background-color: #ababab;
+}
+
+.static{
+
+  position: static;
+  /* Every position default is static position, which will not change */
+
+}
+
+.relative{
+  
+  position: relative;
+  /* This statment will enable that class */
+
+  top: 50px;
+  left: 100px;
+  /* It will move 50px down and move 100px to the right (It will move relative to the static position) */
+  /* It could move the information outside of the parent */
+  /* We can use down and right also */
+
+}
+
+.absolute{
+  
+  position: absolute;
+  /* It will be relative(absolute) to the main page (top left corner or body) */
+  /* It will remove the absolute data and imagin the absolute value didn't exsits */
+  /* That is why the gray box will move up */
+  /* Then it will place the box depend on the top left corner */
+
+  top: 100px;
+  right: 30px;
+  /* The moving mechanism is the same as previous */
+
+  /* However, if we want to move the absolute box within the parent box, 
+  we need to set up the parent box as relative */
+
+}
+
+.fixed{
+  
+  position: fixed;
+  /* It will move relative to the view port from the website user */
+  /* when you move the mouse (scoll down or up) it will keep follow it */
+
+  top: 50px;
+  right: 100px;
+
 }
