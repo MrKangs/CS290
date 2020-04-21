@@ -1,3 +1,7 @@
+.outer-box{
+    border: 5px dashed black;
+}
+
 P{
     background-color: lime;
     
@@ -15,8 +19,9 @@ P{
     /* padding: 10px 30px; */
     /* If we do it do this, it will modify like 10px up and down and 30 px right and left */
 
-    border: 5px solid darkgray;
+    border: 5px dotted darkgray;
     /* Border will make a box for padding and context boxes */
+    /* There is also dotted lines */
 
     margin: 40px;
 
@@ -32,6 +37,32 @@ P{
 
     margin-bottom: 200px;
     /* bottom margin for #special-p values */ 
+}
+
+.special-box{
+    
+    background-color: lightblue;
+    border: 2px dotted black;
+    
+    display: inline;
+    /* This will make all the boxes inline rather than right below them */
+
+    width: 96px;
+    height: 96px;
+    /* the initial box setup for everyone is 96px height and 96px width */
+    
+    padding: 10px; 
+    /* By doing this, it will give an werid looking */
+
+    margin: 20px;
+    /* This will also make the boxes werid */
+
+    display: inline-block;
+    /* To remove that random looking boxes, we need to make the boxes inline in terms of boxes */
+    /* Once doing this, it will give what we aspected */
+    /* Once we change to display: block, all the boxes will be underneath each other */
+
+
 }
 
 

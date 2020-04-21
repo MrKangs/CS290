@@ -1,0 +1,29 @@
+body{
+    
+    font-family: "Helvetica New", Helvetica, sans-serif;
+    /* This will change the whole font family: to access the website, the user needs to install package */
+    /* So we set up condition of font-family: if the user have Helvetica New, then it will deploy that text, if not then Helvetica */
+    /* If there is a space between in the name of the font, needs "" */
+    /* Having the tails on the letter or serif, but not having them are sans-serif */
+    /* sens-serif is included in every computer system, so it is good a backup for fonts conditions */
+    /* If the programmer doens't have a font condition, it will follow broswer default font */
+    /* The guarintee font are sen-serif, serif, and monospace (there is more but that is the major stuffs) */
+    /* Digital display = sans-serif */
+    /* Print display = serif */
+    /* Code display = monospace */
+
+    font-size: 24px;
+    /* This will change the font size */
+
+    font-weight: 900;
+    /* bold is an option, but numbers also can be used */
+    /* The number range is 100, 200, 300, 400, ... , 900 from light to heavy */ 
+    /* It would change drammatically between 100 differenece between the bowser will follow the closest value */
+
+    color: turquoise;
+    /* We could write the color name or in sequence of number for color */
+    
+
+
+
+}
