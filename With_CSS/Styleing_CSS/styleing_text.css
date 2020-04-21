@@ -20,9 +20,14 @@ body{
     /* The number range is 100, 200, 300, 400, ... , 900 from light to heavy */ 
     /* It would change drammatically between 100 differenece between the bowser will follow the closest value */
 
-    color: turquoise;
+    color: #3d8a57;
     /* We could write the color name or in sequence of number for color */
-    
+    /* The order sequence will be Red, Green, and Blue (range from 0 ~ 255) */
+    /* 0 means not containing while 255 is all in */
+    /* For example above, the red: 255, Green: 128, and Blue: 128 */
+    /* We simply convert that into Hexadecimal rather than decimal numbers */
+    /* To use the number, we need to use # before the number */
+
 
 
 
