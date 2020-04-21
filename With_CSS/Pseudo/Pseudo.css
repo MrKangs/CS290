@@ -1,0 +1,21 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  }
+  
+li:hover {
+    /* You will get an effect when the mouse pointer is over the Word in the part */
+    /* It could be also in paragraph: for now list */
+    
+    background-color: #88ff88;
+    /* For now, it will be a green highlighter when you hover the word with the mouse pointer */
+
+}
+  
+a:focus {
+    /* When something is focus within the page, it will do effects */
+    /* Usually you can see by clicking tab button */
+
+    font-weight: bold;
+    /* In this case, it will be change the text into bold text */
+    
+}
