@@ -19,3 +19,30 @@ a:focus {
     /* In this case, it will be change the text into bold text */
     
 }
+
+a{
+    text-decoration: none;
+    /* This will remove the underline of the link */
+
+}
+
+.advanced{
+    
+    border-radius: 50%; 
+    /* This allows to change the shape into a circle */
+    
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    /* This will set up the size of the circle */
+
+    background-color: darkorchid;
+    /* This will change the color of the circle */
+   
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+    /*  */
+
+    cursor: pointer;
+    /* This will change the mouse pointer to indicate to click it */
+
+}
