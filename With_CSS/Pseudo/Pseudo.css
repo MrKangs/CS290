@@ -29,7 +29,8 @@ a{
 .advanced{
     
     border-radius: 50%; 
-    /* This allows to change the shape into a circle */
+    /* This allows to change the shape into a circle: 50% is the max */
+    /* You can set as px valus, but it will not be as circle as be(circular edges) */
     
     width: 300px;
     height: 300px;
@@ -40,7 +41,13 @@ a{
     /* This will change the color of the circle */
    
     box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
-    /*  */
+    /* The first value: x offset (How far to the right direction of the shadow) */
+    /* The second value: y offset (How far to the down direction of the shadow) */
+    /* The third value: amount of blur (in terms of radius) As the px value increases, it gets more blur */
+    /* The last value: the color of the shadow */
+    /* The first and second values can be negative, which will go to the opposite direction */
+    /* The third value range is 0 to infinte: how close to the background color. */
+    /* You can have multiple shadows on a single object. Just need to declare another statement */ 
 
     cursor: pointer;
     /* This will change the mouse pointer to indicate to click it */

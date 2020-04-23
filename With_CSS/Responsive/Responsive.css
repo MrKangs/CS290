@@ -1,0 +1,62 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  a, a:hover {
+    text-decoration: none;
+  }
+  
+  header h1 {
+    margin: 5px;
+    font-weight: 300;
+  }
+  
+  .navbar {
+
+    width: 100%;
+    /* The width can be in px or % that covers the entire bar like a box */
+    
+    background-color: #091d5e;
+    /* This is setting up the background color */
+    
+    color: #611b1b;
+    /* This will setup the text color inside the navbar, but this will not effect if is a link */
+    /* But it does change when you select the link */
+  
+  }
+  
+  .navbar a {
+
+    color: #efefef;
+    /* This will change the link included text color into white */
+
+  }
+  
+  .navbar-list {
+
+    list-style-type: none;
+    /* This will change the bulletpoint options */
+
+    margin: 0;
+    padding: 0;
+    /* Setting up with no margin and padding between two different list */
+    /* This will remove browser default settings */
+
+  }
+  
+  .navitem {
+
+    display: inline-block;
+    margin: 10px;
+    /* Layout the items inline in the navitem with margin each text words 10px */
+
+  }
+  
+  .right {
+    
+    float: right;
+    /* This will move the this class to the right of the nav bar */
+  }
