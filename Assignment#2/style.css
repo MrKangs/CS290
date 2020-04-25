@@ -1,3 +1,231 @@
-/*
- * Add your CSS styles to this file.
- */
+/* **********************************************************************************************************/
+
+/* Name: Kenneth Kang
+/* Date: 4-24-2020
+/* Assignment #2 Using with CSS for design
+
+/* **********************************************************************************************************/
+
+/* This class will moditfy the header part of site where the tweeter text is located */
+.site-title{
+    
+    background-color: rgb(16, 158, 242);
+    color: white;
+    padding-left: 15px;
+    font-weight: 300;
+}
+
+/* **********************************************************************************************************/
+/* The next 10 functions will be related to the Naviagor Bar */
+/* **********************************************************************************************************/
+
+/* This will set the background color and height of the Nav bar */
+.navbar{
+
+    height: 32px;
+    background-color: white; 
+}
+
+/* This will add margin-left */
+.navlist{
+
+    margin-left: 10px;
+}
+
+/* This will set the item in the list as inline-block with padding and margin */
+.navitem{
+
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0px;
+}
+
+/* This will add a border under every link contained text in the nav bar */
+.navlink{
+
+    border-bottom: 2px solid rgb(253,253,253);
+}
+
+/* If we are in that link or page, then it will change from white to blue border */
+.active{
+ 
+    color: rgb(16,158,242);
+    border-bottom: 2px solid;
+}
+
+/* **********************************************************************************************************/
+/* The following 3 functions are related to the search engine bar in the nav bar */
+/* **********************************************************************************************************/
+
+/* This will set the basic location in the search engine while there is no border */
+.navbar-search{
+
+    float: right;
+    padding-top: 5px;
+    padding-right: 20px;
+    border: none;
+}
+
+/* This will set the inner box display in the search engine */
+.navbar-search input{
+    
+    background-color: rgb(217,217,217);
+    border-color: rgb(220,220,220);
+}
+
+/* When the user put the click in the search engine box, it will change the inner box as white */
+.navbar-search input:focus{
+
+    background-color: white;
+}
+
+/* **********************************************************************************************************/
+/* The following 2 functions will be related to the button next to the search engine box */
+/* **********************************************************************************************************/
+
+/* This will change the outter box of the button that doesn't have a border */
+.navbar-search button{
+
+    background-color:rgb(253,253,253);
+    border: none;
+    cursor: pointer;
+}
+
+/* This will change the button when the mouser is on the button */
+.navbar-search button:hover{
+
+    color: rgb(16, 158, 242);
+}
+
+/* **********************************************************************************************************/
+/* The next 7 functions will be related to the twits */
+/************************************************************************************************************/
+
+/* This set ups the twit box locations with flex*/
+.twit-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 150px 150px;
+}
+
+/* This is the set up individual twit box setup while set ups the twit content location */
+.twit{
+
+    background-color: white;
+    width: 330px;
+    height: 60px;
+    padding: 22px;
+    border: 3px solid rgb(217,217,217);
+    position: static;
+    display: flex;
+    align-items: center;
+}
+
+/* The following two functions will be for the twit icon in the twit box */
+
+/* This function displays of the icon in the twit box when the mouser is not top of it */
+.twit-icon{
+
+    padding-left: 15px;
+    font-size: larger;
+}
+
+/* This function displays of the icon in the twit box when the mouser is top of it */
+.twit-icon:hover{
+
+    color: rgb(16, 158, 242);
+    cursor: pointer;
+}
+
+/* **********************************************************************************************************/
+/* The next 3 functions will be informations about the texts in the twit box */
+/* **********************************************************************************************************/
+
+/*  This will set the twit contents location in the twit box */
+.twit-content{
+
+    padding-left: 5px;
+    padding-top: 20px;
+    width: 330px;
+}
+
+/* This function will set the twit author location in the twit box */
+.twit-author{
+
+    float: right;
+}
+
+/* This function will set the twit author as bold text rather normal link looking */
+.twit-author a{
+
+    font-weight: bold;
+}
+
+/* **********************************************************************************************************/
+/* The next 3 functions will be related to the button in the bottom right */
+/* **********************************************************************************************************/
+
+/* This is the basic set up as the button location */
+.bottom-right{
+
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    margin-right: 70px;
+    margin-bottom: 70px;
+}
+
+/* This is the function for the button display when the mouser is not on the button */
+.bottom-right button{
+
+    background-color:red;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: xx-large;
+    color: white;
+    border: none;
+}
+
+/* This is the function for the button display when the mouser is on the button */
+.bottom-right button:hover{
+
+    background-color: rgb(16, 158, 242);
+    font-size: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* **********************************************************************************************************/
+/* The remaining functions are the general display set up
+/* **********************************************************************************************************/
+
+/* This class will set the whole page as padding 0 and margin 0 */
+*{
+
+    padding: 0;
+    margin: 0;
+}
+
+/* This will change the font type and background color of the website */
+body{
+    
+    background-color: rgb(217,217,217);;
+    font-family: "Roboto", sans-serif;
+}
+
+/* This class will change all the link values into none identifiable link text */
+a{
+
+    text-decoration: none;
+    color: black;
+}
+
+/* The mouser is on a link value, it will change the color to blue */
+a:hover{
+
+    cursor: pointer;
+    color: rgb(16,158,242); 
+}
+
+

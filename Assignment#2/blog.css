@@ -1,0 +1,32 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darkcyan;
+    justify-content: center;
+
+}
+
+h3{
+    color: purple;
+}
+
+li{
+    color:red;
+}
+
+P{
+    color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: greenyellow;
+
+}
