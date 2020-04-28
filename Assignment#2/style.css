@@ -11,8 +11,8 @@
     
     background-color: rgb(16, 158, 242);
     color: white;
-    padding-left: 15px;
     font-weight: 300;
+    padding: 7px 15px;
 }
 
 /* **********************************************************************************************************/
@@ -71,6 +71,7 @@
     
     background-color: rgb(217,217,217);
     border-color: rgb(220,220,220);
+    border: 1px solid rgb(220,220,220);
 }
 
 /* When the user put the click in the search engine box, it will change the inner box as white */
@@ -98,7 +99,7 @@
 }
 
 /* **********************************************************************************************************/
-/* The next 7 functions will be related to the twits */
+/* The next 8 functions will be related to the twits */
 /************************************************************************************************************/
 
 /* This set ups the twit box locations with flex*/
@@ -106,20 +107,26 @@
 
     display: flex;
     flex-wrap: wrap;
-    padding: 150px 150px;
+    padding: 150px;
+    padding-top: 50px;
 }
 
 /* This is the set up individual twit box setup while set ups the twit content location */
 .twit{
 
     background-color: white;
-    width: 330px;
+    max-width: 330px;
+    min-width: 275px;
     height: 60px;
     padding: 22px;
+    padding-top: 15px;
+    padding-left: 15px;
     border: 3px solid rgb(217,217,217);
-    position: static;
     display: flex;
     align-items: center;
+    flex-basis: 30%;
+    flex-shrink: 2;
+    flex-grow: 1;
 }
 
 /* The following two functions will be for the twit icon in the twit box */
@@ -128,6 +135,7 @@
 .twit-icon{
 
     padding-left: 15px;
+    padding-bottom: 35px;
     font-size: larger;
 }
 
@@ -139,21 +147,24 @@
 }
 
 /* **********************************************************************************************************/
-/* The next 3 functions will be informations about the texts in the twit box */
+/* The next 4 functions will be informations about the texts in the twit box */
 /* **********************************************************************************************************/
 
 /*  This will set the twit contents location in the twit box */
 .twit-content{
 
     padding-left: 5px;
-    padding-top: 20px;
     width: 330px;
 }
+
+
 
 /* This function will set the twit author location in the twit box */
 .twit-author{
 
     float: right;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 /* This function will set the twit author as bold text rather normal link looking */
@@ -185,6 +196,7 @@
     font-size: xx-large;
     color: white;
     border: none;
+    box-shadow: 10px 5px 20px rgba(0,0,0,0.35);
 }
 
 /* This is the function for the button display when the mouser is on the button */
