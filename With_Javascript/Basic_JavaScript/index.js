@@ -201,14 +201,35 @@ console.log(" == z: ", z);
 // If we didn't declare z in global, then z value will not be modified
 
 
-
-
-
-
 console.log("\n================================================================");
-console.log("== Strings");
+console.log("== Objects");
 console.log("================================================================\n");
 
+var person= {
+    "firstName": "Kenneth",
+    "lastName": "Kang",
+    middleName: "Lee",
+    favoriteNumbers: [3,33,333],
+    sibilings: {
+        "firstName": "Kathryn",
+        lastName: "Kang"
+    },
+    getFullName: function(){
+        return this.firstName + " " + this.lastName;
+    }
+};
+console.log(" == person: ", person);
+// This is how to declare an object
+// The object makes instantious at the moment when it was declare
+// The left hand from the colon point is the field while the right side is called the value
+// Note that name of the field is all in strings, whihc we don't need to put "" or '' because Javascript will understand it
+// Also note that we can have array values and another object inside another object
+// Last, functions can also be part of the object
+// this means that a reference inside this object
 
-
+// To access the field individually, then we write it like this
+console.log(" == person ['firstName']:", person['firstName']);
+console.log(" == person.firstName", person.firstName);
+console.log(" == person.middleName", person.middleName);
+console.log(" == person.getFullName():", person.getFullName());
 
