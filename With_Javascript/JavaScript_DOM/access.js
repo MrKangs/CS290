@@ -37,5 +37,44 @@ photoCardContainer.appendChild(firstPhotoCard);
 console.log(" ==firstPhotoCard", firstPhotoCard);
 
 
+var images = document.getElementsByTagName("img");
+console.log("== images:", images);
+// Another way to grap elements in the HTML is using tags
+// Whenever it has a tag called by img, then it will be called into an HTML collection array
 
+var navlistItems = document.querySelectorAll(".navlist li");
+console.log("== navlistItems:", navlistItems);
+// If we want to collect all the list element, we use querySelectorAll that contains the list
+// This class will be called as NodeList, which behaves same as HTML collection array
+
+/* .navlist li {} */
+// This statement is how we call all the list elements in CSS
+
+var rightNavItem = document.querySelector(".navitem.right");
+console.log("== rightNavItem:", rightNavItem);
+// However, if we just want one element in the list, then we use querySelector for that certain class
+
+console.log("\n===========================");
+console.log("== DOM Node Properties");
+console.log("===========================");
+
+console.log("== firstPhotoCard.textContent:", firstPhotoCard.textContent);
+// This will print the caption of the image, or the text in that section
+// In this case, it will print "Luke ready to fight" with whitespace
+// since we are printing the content inside the firstPhotoCard text messages
+
+console.log("== firstPhotoCard.innerHTML:", firstPhotoCard.innerHTML);
+// This will print the entire HTML inner section such as the following:
+/*
+        <div class="img-container">
+          <img class="person-photo-img" src="https://vignette3.wikia.nocookie.net/starwars/images/6/62/LukeGreenSaber-MOROTJ.png" />
+        </div>
+        <div class="caption">
+          Luke ready to fight.
+        </div>
+*/
+
+console.log("== images[0].src:", images[0].src);
+// This will print the source if there any source that is inside the HTML
+// In this case, it will print the URL of the image for the firstPhotoCard
 
