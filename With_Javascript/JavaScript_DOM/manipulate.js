@@ -96,7 +96,28 @@ function insertPhotoCard(url, caption) {
    // See line 35 to see for the implemtation of Section
 
    console.log(" ==PhotoCardSection_new_input", photoCardSection);
+
+   photoCardContainer.insertBefore(
+     photoCardSection,
+     photoCardContainer.firstChild
+   );
+   // This will make the insertiong before the previous exsiting html content that relates to image
 }
 
 insertPhotoCard('http://placekitten.com/480/480', "Luke as a kitty");
 insertPhotoCard('http://placekitten.com/480/480', "Another kitty");
+
+// Now we know how to add an element into the HTML, let's learn how to remove them
+
+function removeLastPhotoCard1(){
+  var photoCards = document.getElementsByClassName("photo-card");
+  photoCards[photoCards.length -1].remove();
+}
+// This function will remove from displaying the image: there are several ways to do it
+// However, 5% of the user will not able to run this function, which we need to write in a different way
+
+function removeLastPhotoCard2(){
+  var photoCards = document.getElementsByClassName("photo-card");
+  photoCards[photoCards.length -1].parentNode.removeChild(photoCards[photoCards.length - 1]);
+}
+// This works for every web, but we don't use that function
