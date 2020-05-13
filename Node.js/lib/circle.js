@@ -6,9 +6,10 @@ function circumference(r) {
     return Math.PI * r * r;
   }
   
-  // module.exports = circumference;
-  // module.exports = "this is a string I am exporting";
   module.exports = {
     circumference: circumference,
-    area: area
+    area: area,
+    message: "Hello, World!"
   };
+  // When you want to return multiple of functions or statements, 
+  // you use them as objects to return them

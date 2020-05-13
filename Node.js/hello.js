@@ -22,17 +22,44 @@ console.log("== process.env.SOME_ENV_VARIABLE:", process.env.SOME_ENV_VARIABLE);
 // Enviroment variable is a veriable that is associated with the execution environment
 // To add a new environment variable, then write "export [Variable Name(typically all caps) = value]"
 
-// 22:24 Lecture
+var perimeter = require('./sqaure');
+// This will take the perimeter function from the sqaure.js file
+// ./sqaure means it in the same folder and sqaure file
+// Make sure the directory location is clear
 
-// var circumference = require('./circle');
-// console.log("== circumference:", circumference);
-// console.log("== circumference(5):", circumference(5));
+console.log("== perimeter():", perimeter);
+// This will print out the function properties/name
+
+console.log("== perimeter(5):", perimeter(5));
+// This will return the value that the lenght of the square is equal to 5
+
 
 var circle = require('./lib/circle');
+// Most of the files are located in the lib(library folder)
+// To move a file, the statement is mv [filename] [foldername]/
+// To see the what inside in a different folder, it will be ls [foldername]/
+
 console.log("== circle:", circle);
 console.log("== circle.circumference(5):", circle.circumference(5));
 console.log("== circle.area(5):", circle.area(5));
+console.log("== circle.message:", circle.message);
+// Note that you can also send message statements: function is not the only options
 
+
+// That is how to create a new module to import into the server
+// But the problem is that it takes too much time make a new one and 
+// That module might already be on the internet
+
+// Therefore, checkout https://www.npmjs.com 
+// This is the site that can find all kind of module package to find the module that you are looking for
+// There is also an extension of npm for VScode, recommend it!
+
+// In order to use the 3rd party module, you need to go to the terminal to install a particular module
+// it will be this: npm install [name of 3rd party module]
+// For example, we will run npm install figlet
 
 var figlet = require('figlet');
+// This will import figlet into the hello.js
+
+
 
