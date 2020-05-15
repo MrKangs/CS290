@@ -22,8 +22,8 @@ console.log("== process.env.SOME_ENV_VARIABLE:", process.env.SOME_ENV_VARIABLE);
 // Enviroment variable is a veriable that is associated with the execution environment
 // To add a new environment variable, then write "export [Variable Name(typically all caps) = value]"
 
-var perimeter = require('./sqaure');
-// This will take the perimeter function from the sqaure.js file
+var perimeter = require('./square');
+// This will take the perimeter function from the square.js file
 // ./sqaure means it in the same folder and sqaure file
 // Make sure the directory location is clear
 
@@ -60,6 +60,14 @@ console.log("== circle.message:", circle.message);
 
 var figlet = require('figlet');
 // This will import figlet into the hello.js
+
+figlet("Cool Font", function(err, data){
+    if(!err){
+        console.log(data);
+    }
+});
+// This function came from the npm, figlet page as the basic example
+
 
 
 
