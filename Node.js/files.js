@@ -58,3 +58,4 @@ console.log("== This is after fs.readFileSync() 8");
 // then syncronous
 // then console.log 1 to 8
 // then async
+
