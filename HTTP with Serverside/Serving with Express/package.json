@@ -1,0 +1,38 @@
+{
+  "name": "express-serving",
+  "version": "1.0.0",
+  "description": "HTTP serving with Node.js and Express",
+  "main": "Express_with_Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Express_with_Server.js",
+    "dev": "nodemon Express_with_Server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrKangs/CS290.git"
+  },
+  "keywords": [
+    "HTTP",
+    "Server",
+    "Node",
+    "Express"
+  ],
+  "author": "MrKangs",
+  "license": "OSU",
+  "bugs": {
+    "url": "https://github.com/MrKangs/CS290/issues"
+  },
+  "homepage": "https://github.com/MrKangs/CS290#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "//": [
+    "This is how to add comments into the JSON file",
+    "You need to go to scripts that is located near main",
+    "The format will be the following in the script object as others looks lie"
+  ]
+}
