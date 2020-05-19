@@ -60,12 +60,7 @@ var server = http.createServer(function(req, res){
     // This indicates that the server response is done
     // Beyond this point, it will never do anything else even though you add more 
     // responses
-
-
     
-    
-
-
 });
 // This will return as server as an object as server
 // This is a long single statement that will be created for a new server 
