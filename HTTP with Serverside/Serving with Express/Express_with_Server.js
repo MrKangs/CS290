@@ -29,13 +29,68 @@ var app = express();
 const port = 8001;
 const hostname = "127.0.0.1";
 
-//app.get();
-// This is the get method in the HTTP
+app.get('/about', function(req, res, next){
+  res.statusCode = 200;
 
-//app.post();
-// This is the post method in the HTTP
+  res.send("<html><body><h1>About page</h1></body></html>");
+  // The send put content into the response body and send the response
+});
+// This is the get method in the HTTP 
+// The first argument is url after the path: 
+// to see the function that happens, the port needs to be 127.0.0.1:8001/about  
+// The second argument is call function when we execute the function
+// Inside the second argument function, there is a third ardument: next
+// This will lead to the next function unless this function is the last function
 
-// Both functions will be used as middler as we write the express with routing
+app.get('/', function(req, res, next){
+  res.status(200).sendFile(__dirname + "/public/index.html");
+  // This will read the index.html and put in the content information as res.send() function do
+  // and do the statusCode as 200
+  // __dirname is important because that is telling that it means the directory name as "" in this route
+});
+
+app.get('/people', function(req, res, next){
+  res.status(200);
+  res.sendFile(__dirname + "/public/people.html");
+});
+// Same idea above
+
+app.get('/people/:name', function(req, res, next){
+  console.log(" ==req.params", req.params);
+  // This will get the store the name as we make a new object
+
+  var name = req.params.name;
+  // Then we store the params that came from the url as name
+
+  res.status(200).sendFile(__dirname + "/public/people/" + name + ".html");
+  // Then we will add the html as the corresponding html file
+  
+});
+// :name will be the the object of names that will take the name  
+// when the user enter that certain path name
+
+
+app.get('/people/:name/:photo', function(req, res, next){
+  console.log(" == req.params", req.params);
+  next();
+  // This will get out and move to the next function below, which will be 404.html
+});
+// As you can see, you can have many parameters to store as an object
+
+
+
+app.get('*', function(req ,res ,next){
+  res.status(404).sendFile(__dirname + "/public/404.html");
+})
+// The * means everthing except that we declare before, then it will do this function
+// Only people and / are the only one that will give a different html page
+// Since the * is looking all the other exeepts before, the order matters
+
+
+
+// As you see, we can have all the functions that is related to HTTP 
+// such as .get, .post, .delete, or something else
+
 
 app.listen(port, hostname, function () {
   console.log(`Server running at http://${hostname}:${port}/`);
