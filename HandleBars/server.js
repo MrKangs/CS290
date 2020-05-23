@@ -2,7 +2,8 @@ var path = require('path');
 var express = require('express');
 var app = express();
 
-var port = 8000;
+const port = 8001;
+const hostname = "127.0.0.1";
 
 app.use(express.static('public'));
 
@@ -33,9 +34,9 @@ app.get("*", function (req, res, next) {
   res.status(404).sendFile(__dirname + '/public/404.html');
 });
 
-app.listen(port, function (err) {
-  if (err) {
+app.listen(port, hostname, function (err) {
+  if(err){
     throw err;
   }
-  console.log("== Server listening on port", port);
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
