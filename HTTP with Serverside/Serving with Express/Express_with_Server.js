@@ -29,6 +29,13 @@ var app = express();
 const port = 8001;
 const hostname = "127.0.0.1";
 
+var logger = require('./logger')
+// This is from the logger.js file
+
+app.use(logger);
+// This will print the what method and url
+// Check out the logger.js file
+
 app.get('/about', function(req, res, next){
   res.statusCode = 200;
 
@@ -41,6 +48,13 @@ app.get('/about', function(req, res, next){
 // The second argument is call function when we execute the function
 // Inside the second argument function, there is a third ardument: next
 // This will lead to the next function unless this function is the last function
+
+app.use(express.static(__dirname + "/public"));
+// This will set that all the information will be use these files
+// The style.css will automatically applied because .html references the style.css file
+// Which we will be using
+// This can also be used for javascript files
+// Try 127.0.0.1:8001/style.css
 
 app.get('/', function(req, res, next){
   res.status(200).sendFile(__dirname + "/public/index.html");
@@ -55,6 +69,14 @@ app.get('/people', function(req, res, next){
 });
 // Same idea above
 
+var availablePeople= [
+  'luke',
+  'rey',
+  'leia',
+  'finn',
+  'r2d2'
+];
+
 app.get('/people/:name', function(req, res, next){
   console.log(" ==req.params", req.params);
   // This will get the store the name as we make a new object
@@ -62,8 +84,17 @@ app.get('/people/:name', function(req, res, next){
   var name = req.params.name;
   // Then we store the params that came from the url as name
 
-  res.status(200).sendFile(__dirname + "/public/people/" + name + ".html");
-  // Then we will add the html as the corresponding html file
+  if (availablePeople.indexOf(name) >= 0){
+    res.status(200).sendFile(__dirname + "/public/people/" + name + ".html");
+    // Then we will add the html as the corresponding html file
+  }
+  // If the name in the array, then do it
+
+  else {
+    next();
+  }
+  // Else, then it will go to the next function below 
+  // Since the '/people/:name/:photo will not be invalid, that will also go to next
   
 });
 // :name will be the the object of names that will take the name  
@@ -85,9 +116,6 @@ app.get('*', function(req ,res ,next){
 // The * means everthing except that we declare before, then it will do this function
 // Only people and / are the only one that will give a different html page
 // Since the * is looking all the other exeepts before, the order matters
-
-
-
 // As you see, we can have all the functions that is related to HTTP 
 // such as .get, .post, .delete, or something else
 
@@ -107,4 +135,13 @@ app.listen(port, hostname, function () {
 // See the comments to how 
 // To run the command key, it will be the following:
 // npm run [script_name]
+
+
+// Reference 1: https://docs.npmjs.com/about-npm/index.html
+// Reference 2: https://docs.npmjs.com/downloading-and-installing-packages-locally
+// Reference 3: https://docs.npmjs.com/creating-a-package-json-file
+// Refernece 4: https://expressjs.com/en/starter/hello-world.html
+// Reference 5: https://expressjs.com/en/starter/basic-routing.html
+// Refernece 6: https://expressjs.com/en/guide/writing-middleware.html
+// Reference 7: https://expressjs.com/en/starter/static-files.html
 
