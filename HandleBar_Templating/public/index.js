@@ -6,14 +6,14 @@ function createPhotoCard(photoURL, caption) {
     // These names must match the placeholders from the photoCard.handlebars 
   };
 
-  var photoCardHtml = Handlebars.templates.photoCard(photoCardContext);
+  var photoCardHTML = Handlebars.templates.photoCard(photoCardContext);
   // We are passing the url and caption to the photoCard URL and caption
   // To the handlebars in the photoCard.handlebars
   // It will return as a html value
 
-  console.log("== photoCardHTML:", photoCardHtml);
+  console.log("== photoCardHTML:", photoCardHTML);
 
-  return photoCardHtml
+  return photoCardHTML
 
   // The code above is the exact same yet less complicated code
 
@@ -54,7 +54,14 @@ function handleModalAcceptClick() {
 
     var newPhotoCard = createPhotoCard(photoURL, caption);
     var photoCardContainer = document.querySelector('.photo-card-container');
-    photoCardContainer.appendChild(newPhotoCard);
+    //photoCardContainer.appendChild(newPhotoCard);
+    // Because we are not adding it using handlebars, which doesn't make sense for doing appendChild
+    // We use a differnet method
+
+    photoCardContainer.insertAdjacentHTML('beforeend',newPhotoCard);
+    // This is the new method of addinf the HTML
+    // beforeend means I am putting the new HTML into the end of the container
+    // There is beforebegin or afterbegin as well 
     hideModal();
 
   }
