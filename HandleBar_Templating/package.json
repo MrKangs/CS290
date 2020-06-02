@@ -20,7 +20,7 @@
     "Express"
   ],
   "author": "Mr.Kangs",
-  "license": "ISC",
+  "license": "OSU",
   "bugs": {
     "url": "https://github.com/MrKangs/CS290/issues"
   },
@@ -31,9 +31,10 @@
   "dependencies": {
     "express": "^4.17.1",
     "handlebars": "^4.7.6"
-  },
+  },  
   "//": [
     "We can see that in the build command, we create a new js for handlebars",
     "This will be used for html and javascript function"
   ]
 }
+
