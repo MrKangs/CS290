@@ -1,9 +1,22 @@
 var path = require('path');
 var express = require('express');
+var exphbs = require('express-handlebars');
+// This will add the express server with handlebars
+// In order to use it, you need to install express-handlebars for express with handlebars
 var app = express();
+var peopleData = require("./peopleData");
 
 const port = 8003;
 const hostname = "127.0.0.1";
+
+app.engine('handlebars',exphbs({defaultLayout: null}));
+// We are setting up that we are using handlebars with express to the server
+// The first argument is the engine name which is handlebars
+// The second argument with express-handlebars
+
+app.set("view engine", 'handlebars');
+// The second argument came from the app.engine first argument
+
 
 app.use(express.static('public'));
 
@@ -22,9 +35,14 @@ var availablePeople = [
 app.get('/people/:person', function (req, res, next) {
   var person = req.params.person.toLowerCase();
   if (availablePeople.indexOf(person) >= 0) {
-    res.status(200).sendFile(
-      __dirname + '/public/people/' + person + '.html'
-    );
+    
+    res.status(200).render('photoPage', peopleData[person]);
+    // This will add the photo card to the corresponding person in the data file
+
+    // Same information above yet different methods
+    //res.status(200).sendFile(
+    //  __dirname + '/public/people/' + person + '.html'
+    //);
   } else {
     next();
   }
