@@ -65,3 +65,6 @@ app.get('*', function (req, res, next) {
 app.listen(port, function () {
   console.log("== Server listening on port", port);
 })
+
+
+//Reference: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
